@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+juju-log "stopping HyperDex"
+service hyperdex-daemon stop
+sleep 10 # replace this with a call to HyperDex
+service hyperdex-coordinator stop
