@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+juju-log "starting HyperDex"
+service hyperdex-coordinator start
+service hyperdex-daemon start
