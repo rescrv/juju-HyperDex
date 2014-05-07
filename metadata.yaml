@@ -1,0 +1,14 @@
+name: hyperdex
+maintainer: Robert Escriva <robert@hyperdex.org>
+summary: A key-value store witha  rich interface
+description: |
+  HyperDex is a high performance key-value store that provides strong
+  consistency, fault-tolerance, and  a rich API.  It provides the following
+  features : 
+  * Easy to use
+  * Rich API
+  * Document support
+  * High performance
+  * Automatic sharding and replication
+categories:
+  - databases
