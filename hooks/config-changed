@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+cat > /etc/default/hyperdex-coordinator << EOF
+HYPERDEX_COORDINATOR_ENABLE=true
+HYPERDEX_COORDINATOR_LOG_DIR=/home/hyperdex/coordinator/logs
+HYPERDEX_COORDINATOR_DATA_DIR=/home/hyperdex/coordinator/data
+HYPERDEX_COORDINATOR_LISTEN_ADDR=`unit-get public-address`
+HYPERDEX_COORDINATOR_LISTEN_PORT=1982
+EOF
+
+cat > /etc/default/hyperdex-daemon << EOF
+HYPERDEX_DAEMON_ENABLE=true
+HYPERDEX_DAEMON_LOG_DIR=/home/hyperdex/daemon/logs
+HYPERDEX_DAEMON_DATA_DIR=/home/hyperdex/daemon/data
+HYPERDEX_DAEMON_LISTEN_ADDR=`unit-get public-address`
+HYPERDEX_DAEMON_LISTEN_PORT=2012
+HYPERDEX_DAEMON_CONNECT_ADDR=`unit-get public-address`
+HYPERDEX_DAEMON_CONNECT_PORT=1982
+EOF
